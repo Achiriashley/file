@@ -1,0 +1,334 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(224, 224, 224);
+}
+#pc section{
+    max-width: 90%;
+    margin: auto;
+    border-radius: 30px;
+}
+#pc section form nav{
+    display: inline-flex;
+    width: 94%;
+    padding: 2% 3%;
+    justify-content: space-between;
+}
+#pc section form nav h2{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(75, 75, 75);
+}
+.remove{
+    border: none;
+    background-color: red; color: white;
+}
+.remove a{
+    font-size: 12px;
+    color: red;
+}
+nav .remove-all{
+    font-size: 16px;
+    color: red;
+    background-color: transparent;
+    border: none;
+}
+nav .remove-all::after, .remove::after{
+    content: "";
+    width: 0%; height: 1.8px;
+    background-color: red;
+    display: block;
+    margin: auto;
+    transition: .4s;
+}
+nav .remove-all:hover::after, .remove:hover::after{
+    width: 100%;
+}
+.items-holder{
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 2% 0;
+}
+.item-image img{
+    width: 7cm; height: 7cm;
+}
+.bookname{
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.author{
+    font-size: 20px;
+    color: rgb(128, 128, 128);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.amount{
+    padding: 10px;
+}
+.item-total{
+    text-align: right;
+}
+.item-total p{
+    font-size: 20px;
+    color: rgb(44, 44, 44);
+}
+.sum{
+    width: 40vh;
+    float: right;
+}
+.sum-holder{
+    display: inline-flex;
+}
+.value{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 2cm;
+}
+.checkout1{
+    padding: 4% 4%;
+    width: 7cm;
+    border: none;
+    background-color: black; color: white;
+    border-radius: 30px;
+    transition: .4s;
+}
+.checkout:hover{
+    background-color: #999;
+}
+a{
+    color: black;
+    font-size: 25px;
+    text-decoration: none;
+}
+#mobile{
+    display: none;
+}
+.modal1{
+    display: none;
+    width: 100%; height: 100vh;
+    background-color: rgba(34, 34, 34, 0.733);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    text-align: center;
+}
+.close{
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    font-size: 60px;
+}
+.modal1 article{
+    position: absolute;
+    background-color: #fff;
+    width: 38%; height: 80vh;
+    right: 0;
+    border-radius: 50px 0 0 50px;
+    padding: 9% 12%;
+}
+.modal1 article form div{
+    position: relative;
+}
+.modal1 article form div input{
+    padding: 10px 30px 10px 10px;
+    border-radius: 6px;
+    border: 2px solid black;
+}
+.modal1 article form div button{
+    position: absolute;
+    top: 0; right: 0;
+    transform: translate(25px, 6px);
+    background-color: #222; color: #fff;
+    border: none;
+    padding: 3% 2%;
+    font-size: 15px;
+}
+.modal1 nav ul{
+    list-style-type: none;
+}
+.modal1 nav ul li{
+    line-height: 120px;
+}
+.modal1 nav ul li a{
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.cart-link span{
+    font-size: 15px;
+    background-color: #222; color: #fff;
+    border: none;
+    padding: 2%;
+    border-radius: 50%;
+}
+.reset{
+    background-color: blue; color: #fff;
+}
+
+
+
+@media (max-width: 482px) {
+    #pc{
+        display: none;
+    }
+    #mobile{
+        display: block;
+    }
+    .one{
+        width: 90%;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2% 5%;
+    }
+    .user img{
+        border-radius: 50%;
+        width: 12vw; height: 6vh;
+    }
+    .one p{
+        font-size: 30px; font-weight: bold;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .menu{
+        width: 50px;
+    }
+    .form{
+        padding: 0 5%;
+        position: relative;
+    }
+    .two{
+        display: inline-flex;
+        align-items: center;   
+    }
+    input[type ="search"]{
+        border: none;
+        outline: none;
+        width: 10cm;
+        padding: 20px 40px 20px 10px;
+        outline: none;
+        border-radius: 10px;
+    }
+    .search-button{
+        border: none;
+        background-color: transparent;
+        position: absolute;
+        right: 7%; top: 20%;
+    }
+    .search-button img{
+        width: 30px;
+    }
+    .filter-holder button{
+        background-color: transparent;
+        border: none;
+    }
+    .filters{
+        width: 50px;
+    }
+    .items{
+        display: flex;
+        padding: 2% 2%;
+        background-color: white;
+        width: 90%;
+        margin: auto;
+        border-radius: 10px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .items img{
+        width: 18vh; height: 5cm;
+    }
+    .name{
+        font-size: 22px; font-weight: bold;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .price{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: rgb(95, 95, 95);
+    }
+    .details input{
+        width: 2cm;
+        padding: 4% 1%;
+        border: 1px solid black;
+        border-radius: 2px;
+    }
+    .delete button{
+        background-color: transparent;
+        border: none;
+    }
+    .delete img{
+        width: 3vh; height: 4vh;
+    }
+    .four{
+        background-color: white;
+        padding: 2% 4%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .four div{
+        width: 100%;
+        display: inline-flex;
+        justify-content: space-between;
+    }
+    .four p{
+        font-size: 20px;
+    }
+    .tot{
+        font-weight: bold;
+    }
+    .amt{
+        color: rgb(255, 59, 59);
+        font-weight: bold;
+    }
+    .refresh{
+        text-align: center;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .refresh button{
+        background-color: transparent;
+        border: none;
+        color: blue;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .checkout2{
+        background-color: rgb(255, 67, 67); color: white;
+        border: none;
+        width: 100%;
+        padding: 4% 0;
+        border-radius: 30px;
+    }
+}
+@media (max-width: 415px) {
+    input[type ="search"]{
+        width: 8.6cm;
+        padding: 15px 25px 15px 5px;
+    }
+    .filters{
+        width: 40px;
+    }
+}
+@media (max-width: 395px) {
+    .filters{
+        width: 30px;
+    }
+}
+@media (max-width: 385px) {
+    .modal1 nav ul li{
+        line-height: 100px;
+    }
+}
+@media (max-width: 380px) {
+    input[type ="search"]{
+        width: 8cm;
+        padding: 15px 25px 15px 5px;
+    }
+}
+@media (max-width: 365px) {
+    input[type ="search"]{
+        width: 7.6cm;
+        padding: 15px 25px 15px 5px;
+    }
+}

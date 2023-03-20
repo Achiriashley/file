@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <form action="../../controller/login.php" method="post">
+        <section class="container">
+            <h1>Login</h1>
+            <br><br>
+            <div>
+                <input type="text" required name="username">
+                <label for="Username">Username</label>
+            </div>
+            <br><br>
+            <div>
+                <input type="password" required name="password">
+                <label for="Password">Password</label>
+            </div>
+            <br><br>
+            <button name="login">Login</button><br><br>
+            <p>Don't have an account? <a href="../html/signup.html">Create an account</a></p>
+        </section>
+    </form>
+</body>
+</html>
